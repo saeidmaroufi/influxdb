@@ -375,6 +375,7 @@ func (s *Service) ExecuteContinuousQuery(dbi *meta.DatabaseInfo, cqi *meta.Conti
 
 		log.Info("Executing continuous query",
 			zap.String("name", cq.Info.Name),
+			logger.Database(cq.Database),
 			zap.Time("start", startTime),
 			zap.Time("end", endTime))
 	}
@@ -400,6 +401,7 @@ func (s *Service) ExecuteContinuousQuery(dbi *meta.DatabaseInfo, cqi *meta.Conti
 	if s.loggingEnabled {
 		log.Info("Finished continuous query",
 			zap.String("name", cq.Info.Name),
+			logger.Database(cq.Database),
 			zap.Int64("written", written),
 			zap.Time("start", startTime),
 			zap.Time("end", endTime),

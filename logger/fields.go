@@ -31,7 +31,7 @@ const (
 	// DBShardGroupKey is the logging context key used for identifying relevant shard group.
 	DBShardGroupKey = "db.shard_group"
 
-	// DBShardIDKey is the logging context key used for identifying name of the relevant shard group.
+	// DBShardIDKey is the logging context key used for identifying name of the relevant shard number.
 	DBShardIDKey = "db.shard_id"
 )
 const (
